@@ -54,10 +54,50 @@ body{
     border: none;
     cursor: pointer;
 }
+.search-container button:hover {
+    background-color: #17803f;
+    cursor: pointer;
+  }
 
 #result{
     color: #fff;
 }
+
+.botao-escolha {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+
+.container-opcoes {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.button-numeros {
+    text-align: center;
+  }
+  
+  .number-button {
+    display: inline-block;
+    width: 35px;
+    height: 45px;
+    margin: 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffb92a;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .number-button:hover {
+    background-color: #17803f;
+    cursor: pointer;
+  }
+  
 
 .info{
     position: relative;
@@ -161,18 +201,10 @@ p{
     color: #ffb92a;
   }
   .escolher {
-    display: flex;
     align-items: center;
     justify-content: flex-end;
   }
   
-  .escolher {
-    padding: 5px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    
-  }
   .escolher {
     padding: 5px 20px;
     background-color: #ffb92a;
@@ -180,6 +212,11 @@ p{
     cursor: pointer;
     border-radius: 0.3em;
 }
+.escolher:hover {
+    background-color: #17803f;
+    cursor: pointer;
+  }
+  
 .estrela {
     width: 35px;
 }
