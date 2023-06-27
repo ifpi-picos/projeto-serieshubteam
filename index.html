@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeriesHub</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>SeriesHub</title>
 </head>
+
 <body>
-    <h1>SeriesHub</h1>
+
+    
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="movie-name" placeholder="Digite o nome da serie aqui...">
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="result"></div>
+        <div class="botao-escolha">
+            <select>
+              <option value="opcao1">Assistir</option>
+              <option value="opcao2">Assistido</option>
+            </select>
+            <button class="escolher">Escolher</button>
+
+            <button>
+                <img class="estrela" src="estrela.png" alt="Imagem">
+            </button>
+            <button>
+                <img class="estrela" src="estrela.png" alt="Imagem">
+            </button>
+            <button>
+                <img class="estrela" src="estrela.png" alt="Imagem">
+            </button>
+
+          </div>
+          
+
+    </div>
+
+    <div class="texto-canto">
+        <p>SeriesHub</p>
+    </div>
+
+
+
+    <script src="key.js"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
