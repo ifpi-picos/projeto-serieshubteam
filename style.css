@@ -58,8 +58,8 @@ body{
     background-color: #17803f;
     cursor: pointer;
   }
-
-#result{
+  
+  #result{
     color: #fff;
 }
 
@@ -73,7 +73,30 @@ body{
     display: flex;
     gap: 10px;
 }
+.opcoes-umdois {
+    border-radius: 5px;
+}
 
+.escolher {
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 50%;
+}
+.escolher {
+  padding: 0px 10px;
+  background-color: #ffb92a;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+.escolher:hover {
+  background-color: #17803f;
+  cursor: pointer;
+}
+
+.checked {
+    color: orange;
+  }
 
 
 .button-numeros {
@@ -82,14 +105,14 @@ body{
   
   .number-button {
     display: inline-block;
-    width: 35px;
-    height: 45px;
+    width: 25px;
+    height: 23px;
     margin: 5px;
     border: none;
     border-radius: 50%;
     background-color: #ffb92a;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 14px;
     font-weight: bold;
   }
   
@@ -189,6 +212,7 @@ p{
         grid-template-columns: 1fr;
     }
 }
+
 .texto-canto {
     position: fixed;
     top: 0;
@@ -200,23 +224,6 @@ p{
     font-family: Righteous;
     color: #ffb92a;
   }
-  .escolher {
-    align-items: center;
-    justify-content: flex-end;
-  }
-  
-  .escolher {
-    padding: 5px 20px;
-    background-color: #ffb92a;
-    border: none;
-    cursor: pointer;
-    border-radius: 0.3em;
-}
-.escolher:hover {
-    background-color: #17803f;
-    cursor: pointer;
-  }
-  
 .estrela {
     width: 35px;
 }
