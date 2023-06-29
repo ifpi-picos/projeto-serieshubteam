@@ -4,7 +4,7 @@ let resultado = document.getElementById("result");
 
 let getSerie = () => {
     let nomeSerie = serieNomeRef.value;
-    let url = `http://www.omdbapi.com/?t=${nomeSerie}&apikey=${key}`;
+    let url = `https://www.omdbapi.com/?t=${nomeSerie}&apikey=${key}`;
 
 
     if (nomeSerie.length <= 0) {
