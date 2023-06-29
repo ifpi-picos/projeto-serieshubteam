@@ -12,16 +12,24 @@ body{
     background-image: linear-gradient(to bottom, #000000, #7f2cb6);
 }
 
-.container{
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: max-content(200px) 1fr;
+}
+
+.card-series {
     font-size: 16px;
     width: 90vw;
     max-width: 37.5em;
     padding: 3em 1.8em;
     background-color: black;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     border-radius: 0.6em;
     box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
 }
@@ -57,70 +65,110 @@ body{
 .search-container button:hover {
     background-color: #17803f;
     cursor: pointer;
-  }
-  
-  #result{
+}
+
+#result{
     color: #fff;
 }
 
 .botao-escolha {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    justify-content: end;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: flex-end;
 }
 
 .container-opcoes {
-    display: flex;
+
     gap: 10px;
-}
-.opcoes-umdois {
-    border-radius: 5px;
 }
 
 .escolher {
-  align-items: center;
-  justify-content: flex-end;
-  border-radius: 50%;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 50%;
 }
 .escolher {
-  padding: 0px 10px;
-  background-color: #ffb92a;
-  border: none;
-  cursor: pointer;
-  border-radius: 0.3em;
+    padding: 0px 10px;
+    background-color: #ffb92a;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3em;
 }
 .escolher:hover {
-  background-color: #17803f;
-  cursor: pointer;
+    background-color: #17803f;
+    cursor: pointer;
 }
 
 .checked {
     color: orange;
   }
-
-
-.button-numeros {
-    text-align: center;
-  }
   
-  .number-button {
-    display: inline-block;
-    width: 25px;
-    height: 23px;
-    margin: 5px;
-    border: none;
-    border-radius: 50%;
-    background-color: #ffb92a;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-  }
   
-  .number-button:hover {
-    background-color: #17803f;
+  .button-numeros {
+      text-align: center;
+    }
+    
+    .number-button {
+        display: inline-block;
+        width: 25px;
+        height: 23px;
+        margin: 5px;
+        border: none;
+        border-radius: 50%;
+        background-color: #ffb92a;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+/* estilizaçao estrela  */
+.rating {
+    width: 200px;
+    margin: 0 auto 1em;
+    font-size: 25px;
+}
+.rating input {
+    float: right;
+    opacity: 0;
+position: absolute;
+}
+.rating a,
+.rating label {
+    float:right;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+    color: orange;
     cursor: pointer;
-  }
-  
+}
+.rating2 {
+    margin-left: 100px;
+    direction: rtl;
+}
+#stars{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.rating2 a {
+    float:none
+}
+/* fim estilizaçao estrela */
 
 .info{
     position: relative;
@@ -143,8 +191,7 @@ h2{
 .rating{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.6em;
+    justify-content: flex-end;
     margin: 0.6em 0 0.9em 0;
 }
 
@@ -207,26 +254,36 @@ p{
         width: auto;
         max-height: 10.8em;
     }
-
+    
     .info{
         grid-template-columns: 1fr;
     }
 }
 
 .texto-canto {
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     padding: 20px;
-    font-size: 40px;
-  }
-  .texto-canto p {
-    font-family: Righteous;
-    color: #ffb92a;
-  }
-.estrela {
-    width: 35px;
+    font-size: 40px; */
 }
-
-.estrela button {
-}
+  .texto-canto  {
+      font-size: 40px;
+      font-family: Righteous;
+      color: #ffb92a;
+    }
+/*tabela*/
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid rgb(0, 0, 0);
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #ffb92a;
+    }
