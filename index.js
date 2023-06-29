@@ -51,7 +51,7 @@ escolher.addEventListener("click", () => {
 
 let getSerie = () => {
     let nomeSerie = serieNomeRef.value;
-    let url = `https://www.omdbapi.com/?t=${nomeSerie}&apikey=${key}`;
+    let url = `http://www.omdbapi.com/?t=${nomeSerie}&apikey=${key}`;
 
 
     if (nomeSerie.length <= 0) {
