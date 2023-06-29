@@ -2,6 +2,53 @@ let serieNomeRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let resultado = document.getElementById("result");
 
+let strimings = document.querySelector(".strimings")
+let statusSeries = document.querySelector("#status")
+let escolher = document.querySelector("#escolher")
+
+let serie = {}
+
+let series = []
+
+
+strimings.addEventListener("change", () => {
+    serie.striming = strimings.value
+})
+
+statusSeries.addEventListener("change", () => {
+    serie.status = statusSeries.value
+})
+
+
+escolher.addEventListener("click", () => {
+    const tbody = document.getElementById('tbody');
+    tbody.innerHTML = ""
+    series.push(serie)
+    console.log("series: ", series)
+    for(const serie of series){
+        const row = document.createElement('tr');
+        console.log("serie: ", serie)
+        // for(const val of Object.values(obj)){
+
+          const colSerie = document.createElement('td');
+          const colDistribuidor = document.createElement('td');
+          const colStatus = document.createElement('td');
+          const colPrioridade = document.createElement('td');
+
+          colSerie.textContent = serie.title;
+          colDistribuidor.textContent = serie.striming;
+          colStatus.textContent = serie.status;
+          colPrioridade.textContent = "";
+
+          row.appendChild(colSerie);
+          row.appendChild(colDistribuidor);
+          row.appendChild(colStatus);
+          row.appendChild(colPrioridade);
+          tbody.appendChild(row)
+        }
+        console.log("row: ", row)
+    })
+
 let getSerie = () => {
     let nomeSerie = serieNomeRef.value;
     let url = `http://www.omdbapi.com/?t=${nomeSerie}&apikey=${key}`;
@@ -13,6 +60,10 @@ let getSerie = () => {
         fetch(url).then((resp) => resp.json()).then((data) => {
 
             if (data.Response == "True") {
+                serie = {
+                    title: data.Title,
+                    porter: data.Poster
+                }
                 resultado.innerHTML = `
                     <div class="info">
                         <img src=${data.Poster} class="poster">

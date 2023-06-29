@@ -27,20 +27,20 @@
             
             <div class="botao-escolha">
                 <div class="container-opcoes">
-                    <select class="opcoes-umdois">
-                        <option value="opcao1">Assistir</option>
-                        <option value="opcao2">Assistido</option>
+                    <select id="status" class="opcoes-umdois">
+                        <option value="assistir">Assistir</option>
+                        <option value="assistido">Assistido</option>
                     </select>
                 </div>
 
                 <div class="botao-strimings">
                     <select class="strimings">
-                        <option value="str-button">Netflix</option>
-                        <option value="str-button">HBO MAX</option>
-                        <option value="str-button">Disney+</option>
-                        <option value="str-button">Prime Video</option>
-                        <option value="str-button">Paramount</option>
-                        <option value="str-button">Globo Play</option>
+                        <option value="Netflix">Netflix</option>
+                        <option value="HBO MAX">HBO MAX</option>
+                        <option value="Disney+">Disney+</option>
+                        <option value="Prime Video">Prime Video</option>
+                        <option value="Paramount">Paramount</option>
+                        <option value="Globo Play">Globo Play</option>
                     </select>
                     
                 </div>
@@ -49,7 +49,7 @@
                     <a href="#2" title="Give 2 stars">★</a>
                     <a href="#1" title="Give 1 star">★</a>
                 </div>
-                <button class="escolher">Escolher</button>
+                <button class="escolher" id="escolher">Escolher</button>
             </div>
 
             
@@ -67,6 +67,11 @@
       <tr>
         <th>Serie</th>
         <th>Distribuidor</th>
+        <th>Status</th>
         <th>Prioridade</th>
       </tr>
     </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
