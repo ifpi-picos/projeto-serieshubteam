@@ -72,18 +72,12 @@ body{
 }
 
 .botao-escolha {
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex-wrap: wrap;
     align-content: flex-end;
     align-items: flex-end;
-=======
-    display: flexbox;
-    gap: 10px;
-    justify-content: flex-end;
->>>>>>> 280356f52e2ee1129b919e179a4878e87843a27e
 }
 
 .container-opcoes {
@@ -112,7 +106,6 @@ body{
     color: orange;
   }
   
-<<<<<<< HEAD
   
   .button-numeros {
       text-align: center;
@@ -131,21 +124,6 @@ body{
         font-weight: bold;
     }
     
-=======
-  .number-button {
-    display: inline-block;
-    width: 25px;
-    height: 23px;
-    margin: 5px;
-    border: none;
-    border-radius: 50%;
-    background-color: #ffb92a;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
->>>>>>> 280356f52e2ee1129b919e179a4878e87843a27e
 /* estilizaçao estrela  */
 .rating {
     width: 200px;
@@ -153,13 +131,8 @@ body{
     font-size: 25px;
 }
 .rating input {
-<<<<<<< HEAD
     float: right;
     opacity: 0;
-=======
-float: right;
-opacity: 0;
->>>>>>> 280356f52e2ee1129b919e179a4878e87843a27e
 position: absolute;
 }
 .rating a,
@@ -183,7 +156,6 @@ position: absolute;
     cursor: pointer;
 }
 .rating2 {
-<<<<<<< HEAD
     margin-left: 100px;
     direction: rtl;
 }
@@ -193,10 +165,6 @@ position: absolute;
     margin: 0;
 }
 
-=======
-    direction: rtl;
-}
->>>>>>> 280356f52e2ee1129b919e179a4878e87843a27e
 .rating2 a {
     float:none
 }
@@ -292,14 +260,6 @@ p{
     }
 }
 
-.texto-canto {
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-<<<<<<< HEAD
-    font-size: 40px; */
-}
   .texto-canto  {
       font-size: 40px;
       font-family: Righteous;
@@ -320,11 +280,3 @@ p{
     th {
       background-color: #ffb92a;
     }
-=======
-    font-size: 40px;
-  }
-  .texto-canto p {
-    font-family: Righteous;
-    color: #ffb92a;
-  }
->>>>>>> 280356f52e2ee1129b919e179a4878e87843a27e

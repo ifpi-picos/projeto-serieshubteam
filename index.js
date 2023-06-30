@@ -21,14 +21,15 @@ statusSeries.addEventListener("change", () => {
 
 
 escolher.addEventListener("click", () => {
+    const serieExiste = series.find((serieAtual) => serieAtual.title == serie.title)
+    if(serieExiste) {
+        return alert("Serie já adicionada")
+    }
     const tbody = document.getElementById('tbody');
     tbody.innerHTML = ""
     series.push(serie)
-    console.log("series: ", series)
     for(const serie of series){
         const row = document.createElement('tr');
-        console.log("serie: ", serie)
-        // for(const val of Object.values(obj)){
 
           const colSerie = document.createElement('td');
           const colDistribuidor = document.createElement('td');
@@ -46,7 +47,6 @@ escolher.addEventListener("click", () => {
           row.appendChild(colPrioridade);
           tbody.appendChild(row)
         }
-        console.log("row: ", row)
     })
 
 let getSerie = () => {
@@ -62,7 +62,9 @@ let getSerie = () => {
             if (data.Response == "True") {
                 serie = {
                     title: data.Title,
-                    porter: data.Poster
+                    porter: data.Poster,
+                    striming: strimings.value,
+                    status: statusSeries.value,
                 }
                 resultado.innerHTML = `
                     <div class="info">
