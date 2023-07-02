@@ -2,13 +2,18 @@ let serieNomeRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let resultado = document.getElementById("result");
 
+
+// Select
 let strimings = document.querySelector(".strimings")
 let statusSeries = document.querySelector("#status")
+let prioridade = document.getElementById("prioridade")
+
 let escolher = document.querySelector("#escolher")
 
 let serie = {}
 
 let series = []
+
 
 
 strimings.addEventListener("change", () => {
@@ -19,35 +24,54 @@ statusSeries.addEventListener("change", () => {
     serie.status = statusSeries.value
 })
 
+prioridade.addEventListener("change", () => {
+    serie.prioridade = prioridade.value
+})
+
 
 escolher.addEventListener("click", () => {
+
+
     const serieExiste = series.find((serieAtual) => serieAtual.title == serie.title)
-    if(serieExiste) {
+    if (serieExiste) {
         return alert("Serie já adicionada")
     }
-    const tbody = document.getElementById('tbody');
-    tbody.innerHTML = ""
+    const tbodyAssistir = document.getElementById('tbody-assistir');
+    const tbodyAssistido = document.getElementById('tbody-assistido');
+    
+    tbodyAssistir.innerHTML = ""
+    tbodyAssistido.innerHTML = ""
+
+
+    series.sort((a, b) => b.prioridade - a.prioridade);
     series.push(serie)
-    for(const serie of series){
+    console.log("series", series)
+    for (const serie of series) {
         const row = document.createElement('tr');
 
-          const colSerie = document.createElement('td');
-          const colDistribuidor = document.createElement('td');
-          const colStatus = document.createElement('td');
-          const colPrioridade = document.createElement('td');
+        const colSerie = document.createElement('td');
+        const colDistribuidor = document.createElement('td');
+        const colStatus = document.createElement('td');
+        const colPrioridade = document.createElement('td');
 
-          colSerie.textContent = serie.title;
-          colDistribuidor.textContent = serie.striming;
-          colStatus.textContent = serie.status;
-          colPrioridade.textContent = "";
+        colSerie.textContent = serie.title;
+        colDistribuidor.textContent = serie.striming;
+        colStatus.textContent = serie.status;
+        colPrioridade.textContent = serie.prioridade;
 
-          row.appendChild(colSerie);
-          row.appendChild(colDistribuidor);
-          row.appendChild(colStatus);
-          row.appendChild(colPrioridade);
-          tbody.appendChild(row)
+        row.appendChild(colSerie);
+        row.appendChild(colDistribuidor);
+        row.appendChild(colStatus);
+
+        if (serie.status == "assistir") {
+            row.appendChild(colPrioridade);
+            tbodyAssistir.appendChild(row)
+        } else {
+            tbodyAssistido.appendChild(row)
         }
-    })
+
+    }
+})
 
 let getSerie = () => {
     let nomeSerie = serieNomeRef.value;
