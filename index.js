@@ -55,7 +55,7 @@ function atualizarTabelas(){
         const colBotaoDeletar = document.createElement('td');
 
         const button = document.createElement("button")
-        button.textContent = "Deletar"
+        button.textContent = "Excluir"
 
         button.addEventListener("click", () => {
             deletarSerie(serie.title)

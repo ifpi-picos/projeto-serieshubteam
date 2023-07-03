@@ -27,7 +27,7 @@
 
             <div class="botao-escolha">
                 <div class="container-opcoes">
-                    <select id="status" class="opcoes-umdois" required>
+                    <select id="status" class="opçoes-status" required>
                         <option selected disabled value="">Status</option>
                         <option value="assistir">Assistir</option>
                         <option value="assistido">Assistido</option>
@@ -68,13 +68,13 @@
         <table class="table" id="tabela-assistir">
 
             <thead>
-                <caption>Assistir</caption>
+                <caption class="titulo-tabela">Assistir</caption>
                 <tr>
                     <th>Serie</th>
                     <th>Distribuidor</th>
                     <th>Status</th>
                     <th>Prioridade</th>                  
-                    <th></th>                  
+                    <th>Remover serie</th>                  
                 </tr>
             </thead>
             <tbody id="tbody-assistir">
@@ -83,13 +83,13 @@
         </table>
 
         <table class="table" id="tabela-assistido">
-            <caption>Assistidos</caption>
+            <caption class="titulo-tabela">Assistidos</caption>
             <thead>
                 <tr>
                     <th>Serie</th>
                     <th>Distribuidor</th>
                     <th>Status</th>
-                    <th></th>
+                    <th>Remover serie</th>
                 </tr>
             </thead>
             <tbody id="tbody-assistido">

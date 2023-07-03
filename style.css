@@ -9,8 +9,7 @@
 
 body{
     margin-bottom: 60px;
-  /*  background-image: linear-gradient(to bottom, #000000, #7f2cb6); */
-  background-color: #c7c7c7;
+  background-color: #1a1a1d;
 }
 
 .container {
@@ -21,27 +20,22 @@ body{
     grid-template-columns: max-content(200px) 1fr;
 }
 
-.titulo-principal  {
+.titulo-principal {
     font-size: 40px;
     font-family: Righteous;
-    color: #ffb92a;
+    color: #c3073f;
     -webkit-text-stroke-width: 1px; /* espessura do contorno */
     -webkit-text-stroke-color: #000;
   }
   
-
 .card-series {
     font-size: 16px;
     width: 90vw;
     max-width: 37.5em;
     padding: 3em 1.8em;
     background-color: black;
-    /* position: fixed; */
-    /* top: 0; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
     border-radius: 0.6em;
-    box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+    box-shadow: 1.2em 2em 3em rgba(161, 161, 161, 0.2);
 }
 
 .search-container{
@@ -68,12 +62,14 @@ body{
 }
 
 .search-container button{
-    background-color: #ffb92a;
+    background-color:#c3073f;
+    ;
     border: none;
     cursor: pointer;
 }
+
 .search-container button:hover {
-    background-color: #17803f;
+    background-color: #4f8f68;
     cursor: pointer;
 }
 
@@ -91,7 +87,6 @@ body{
 }
 
 .container-opcoes {
-
     gap: 10px;
 }
 
@@ -102,37 +97,28 @@ body{
 }
 .escolher {
     padding: 0px 10px;
-    background-color: #ffb92a;
+    background-color: #c3073f;
     border: none;
     cursor: pointer;
     border-radius: 0.3em;
 }
 .escolher:hover {
-    background-color: #17803f;
+    background-color: #4f8f68;
     cursor: pointer;
 }
-
-.checked {
-    color: orange;
-  }
-  
-  
-  .button-numeros {
-      text-align: center;
-    }
     
-    .number-button {
+.number-button {
         display: inline-block;
         width: 25px;
         height: 23px;
         margin: 5px;
         border: none;
         border-radius: 50%;
-        background-color: #ffb92a;
+        background-color: #F9CE90;
         color: #ffffff;
         font-size: 14px;
         font-weight: bold;
-    }
+}
     
 .info{
     position: relative;
@@ -225,13 +211,24 @@ p{
   }
   
 th, td {
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid #202020;
     padding: 8px;
     text-align: left;
+    /* texto tabela */
+    color: #000000;
   }
   
 th {
-    background-color: #ffb92a;
+    background-color:#c3073f;
+}
+
+tr {
+    background-color: #939395   ;
+}
+
+  .titulo-tabela {
+    border: 2px solid #000000;  
+    background-color: #c3073f;
   }
 
 @media screen and (max-width: 600px) {
@@ -248,5 +245,3 @@ th {
         grid-template-columns: 1fr;
     }
 }
-
-
